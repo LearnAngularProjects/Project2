@@ -1,0 +1,8 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: #e7e2e2;
+  margin-bottom: 5px;
+}

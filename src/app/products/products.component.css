@@ -1,0 +1,68 @@
+/* Basic styling for the product container */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background-color: antiquewhite;
+}
+
+/* Styling for individual product items */
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.product-price,
+.product-availability {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.buttons button {
+  margin-left: 5px;
+  border: 1px solid black;
+  width: 80px;
+  height: 30px;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+}
+
+.buttons button:active {
+  opacity: 0.5;
+}
+
+#buy {
+  background-color: yellow;
+}
+
+#details {
+  background-color: green;
+  color: white;
+}
+
+#notify {
+  background-color: red;
+  color: white;
+
+}

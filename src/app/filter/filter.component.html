@@ -1,0 +1,15 @@
+<div class="filter-container">
+  <form>
+    <input type="radio" class="all" id="all" name="filter" value="all" [(ngModel)]="selectedRadioButtonValue"
+      (change)="onRadioButtonSelectionChanged()" />
+    <label for="all">All({{all}})</label>
+
+    <input type="radio" class="available" id="available" name="filter" value="Available"
+      [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()" />
+    <label for="available">Available({{available}})</label>
+
+    <input type="radio" class="not-available" id="not-available" name="filter" value="Not Available"
+      [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()" />
+    <label for="not-available">No Available({{notAvailable}})</label>
+  </form>
+</div>

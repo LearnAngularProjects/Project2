@@ -1,0 +1,28 @@
+<div>
+  <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+  <app-filter [all]="getTotalProducts()" [available]="getAvailableProducts()" [notAvailable]="getNotAvailableProducts()"
+    (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"></app-filter>
+
+</div>
+
+<div class="product-container">
+  <ng-container *ngFor="let product of products">
+    <div *ngIf="productCountRadioButton === 'all' || productCountRadioButton === product.availability">
+      <div class="product" *ngIf="searchText === '' || product.name.toLowerCase().includes(searchText)">
+        <img class="product-image" [src]="product.imageLink" alt="{{product.name}}">
+        <h2 class="product-name">{{product.name}}</h2>
+        <p class="product-description">{{product.description}}</p>
+        <p class="product-price">$ {{product.price.toFixed(2)}}</p>
+        <p class="product-availability" [ngStyle]="{'color': product.availability === 'Available' ? 'green' : 'red'}">{{
+          product.availability }}</p>
+        <div class="buttons">
+          <button *ngIf="product.availability === 'Available' else notify" id="buy">Buy</button>
+          <ng-template #notify>
+            <button id="notify">Notify</button>
+          </ng-template>
+          <button id="details">Details</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,5 @@
+<div class="search-container">
+  <input type="text" class="search-box" placeholder="Search..." [(ngModel)]="searchText"
+    (input)="onSearchTextChanged()">
+  <span class="search-text" *ngIf="searchText != ''">You searched "{{searchText}}"</span>
+</div>
